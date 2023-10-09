@@ -12,6 +12,7 @@ public class Solution {
         double tax = ( (double)taxPercentage / 100) * mealCost;
 
         mealPrice = mealCost + tip + tax;
+        //print out the total cost of the meal
         System.out.println("Total cost of the meal is " + Math.round(mealPrice));
 
 
