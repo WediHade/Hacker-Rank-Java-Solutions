@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Solution {
 
-    public static void totalCost(double mealCost, int tipPercentage, int taxPercentage) {
+    public static double totalCost(double mealCost, int tipPercentage, int taxPercentage) {
 
         //create a function to calculate the total cost of a meal
         double mealPrice;
@@ -12,10 +12,8 @@ public class Solution {
         double tax = ( (double)taxPercentage / 100) * mealCost;
 
         mealPrice = mealCost + tip + tax;
-        //print out the total cost of the meal
-        System.out.println("Total cost of the meal is " + Math.round(mealPrice));
 
-
+        return mealPrice;
     }
 
     public static void main(String[] args) {
@@ -33,7 +31,10 @@ public class Solution {
         int tax = scan.nextInt();
 
         //method call
-        totalCost(mealCost, tip, tax);
+        double result = totalCost(mealCost, tip, tax);
+
+        //print out the total cost of the meal
+        System.out.println("Total cost of the meal is " + Math.round(result));
 
     }
 
